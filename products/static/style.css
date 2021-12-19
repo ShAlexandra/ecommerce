@@ -1,0 +1,9 @@
+.description{
+font: italic 1.2em "Fira Sans", serif;
+}
+.text{
+font: italic small-caps bold 22px/2 cursive;
+}
+.name{
+font: italic small-caps bold 40px cursive !important;
+}

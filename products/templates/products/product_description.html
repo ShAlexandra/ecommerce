@@ -1,0 +1,19 @@
+{% extends "products/base.html" %}
+{% load static %}
+{% block title %}Описание товара{% endblock %}
+{% block content %}
+    <div class="row name text">{{ product }}</div>
+        <br/>
+        {% if images %}
+            {% for image in images %}
+                <img src="{{ image.image.url }}" alt="Smth" width="200px" height="300px"/>
+            {% endfor %}
+        {% endif %}
+        <br/>
+    <div class="row text">Стоимость: {{ product.price }} рублей</div>
+    <div class="row text">Год написания: {{ product.year }}</div>
+    <div class="row text">Описание:</div>
+    <div class="row description">{{ product.content }}</div>
+    <div class="row text">Категория товара: {{ product.categories }}</div>
+    <button type="button" class="btn btn-primary">Купить</button>
+{% endblock %}

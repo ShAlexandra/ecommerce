@@ -1,0 +1,9 @@
+{% extends "products/base.html" %}
+{% load static %}
+{% block title %}Список категорий{% endblock %}
+{% block content %}
+<div class="row text name">Список серий книг Джоан Роулинг</div>
+    {% for category in categories %}
+        <div class="row text"><a class="categories" href="{% url 'products_list' category.id %}">{{ category }}</a></div>
+     {% endfor %}
+{% endblock %}
